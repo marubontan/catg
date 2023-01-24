@@ -37,13 +37,9 @@ class AddUseCase:
         return os.path.join(base_path, target, file_name)
 
     def _compose_filling_values(self, use_case_name: str) -> Dict:
-        dto_class = self._compose_dto_class_name(use_case_name)
-        dto_snake = self._compose_dto_snake_name(use_case_name)
         parsed_object = self._compose_parsed_object_name(use_case_name)
         return {
             "use_case": use_case_name,
-            "dto_class": dto_class,
-            "dto_snake": dto_snake,
             "parsed_object": parsed_object,
         }
 
@@ -62,16 +58,6 @@ class AddUseCase:
     @staticmethod
     def _compose_parsed_object_name(use_case_name: str) -> str:
         return "".join([word.capitalize() for word in f"{use_case_name}".split("_")])
-
-    @staticmethod
-    def _compose_dto_snake_name(use_case_name: str) -> str:
-        return f"{use_case_name}_dto"
-
-    @staticmethod
-    def _compose_dto_class_name(use_case_name: str) -> str:
-        return "".join(
-            [word.capitalize() for word in f"{use_case_name}_dto".split("_")]
-        )
 
     @staticmethod
     def _load_template(file_path: str) -> Template:
