@@ -1,5 +1,5 @@
 from dataclasses import dataclass
 
 @dataclass
-class {{dto_class}}:
+class {{parsed_object}}OutputDto:
     pass

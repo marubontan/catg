@@ -1,10 +1,10 @@
 from typing import TypedDict
-from ..dto.{{use_case}} import {{dto_class}}
+from ..dto.{{use_case}} import {{parsed_object}}OutputDto
 
 class {{parsed_object}}Body(TypedDict):
     pass
 
 class {{parsed_object}}Adapter:
     @classmethod
-    def {{dto_snake}}_to_parsed_body({{dto_snake}}: {{dto_class}}) -> {{parsed_object}}Body:
+    def {{use_case}}_output_dto_to_parsed_body({{use_case}}_output_dto: {{parsed_object}}OutputDto) -> {{parsed_object}}Body:
         pass
