@@ -9,7 +9,7 @@ pip install -e .
 
 ## How to use
 ```bash
-catg generate_template domain
+catg generate-template domain
 ```
 By this the basic template will be made.  
 ```
@@ -26,7 +26,7 @@ By this the basic template will be made.
 Whenever you need to add new use case, the command below will generate the necessary files with some template code.  
 ```
 cd domain
-catg add_use_case get_report
+catg add-use-case get_report
 ```
 Each directories have new file for the new use case, this time, get_report.
 ```
