@@ -10,7 +10,7 @@ class {{parsed_object}}ResponseBody(TypedDict):
 
 class {{parsed_object}}Adapter:
     @classmethod
-    def {{use_case}}_request_body_to_output_dto({{use_case}}_request_body: {{parsed_object}}RequestBody) -> {{parsed_object}}InputDto:
+    def {{use_case}}_request_body_to_input_dto({{use_case}}_request_body: {{parsed_object}}RequestBody) -> {{parsed_object}}InputDto:
         pass
 
     @classmethod
